@@ -363,7 +363,7 @@ GET https://hoz3.com/restful/support/hubs/{hubId}/controllers/{controllerId}/
                             "enabled": true
                         }
                     ]
-                },
+                }
                 ... removed
             }
         },
@@ -428,7 +428,7 @@ POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/waterNow
 Request Body
 {
      "controllerIDs":[{controllerId}],
-     "duration":300000
+     "duration":{durationInMilliseconds}
  }
 
 Response
@@ -439,9 +439,23 @@ Response
 
 
 ## /{hubId}/controllers/actions/Pause
-Will pause watering for x number of days
+Will pause watering for {pauseDuration} number of days
 
-TODO - Document
+```JSON
+POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/pause
+
+Request Body
+{
+     "controllerIDs":[{controllerId}],
+     "duration":{pauseDuration}
+ }
+
+Response
+{
+    "errorCode": 0
+}
+```
+
 ## /{hubId}/controllers/actions/Unpause 
 Will remove a Pause
 
