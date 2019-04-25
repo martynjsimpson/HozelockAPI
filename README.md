@@ -255,7 +255,7 @@ GET https://hoz3.com/restful/support/hubs/{hubId}/schedules/{scheduleId}
 
 
 ## /{hubId}/controllers
-Supports 
+Supports "GET" "HEAD"
 
 Retrieve all controllers
 
@@ -515,7 +515,21 @@ Response
 ```
 
 ## /{hubId}/controllers/actions/stopWatering
-Stops the watering
+Stops the watering for a given {controllerId}
+
+```JSON
+POST https://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/stopWatering
+
+Request Body
+{
+     "controllerIDs":[{controllerId}]
+ }
+
+Response
+{
+    "errorCode": 0
+}
+```
 
 TODO - Document
 ## /{hubId}/controllers/actions/setMode
