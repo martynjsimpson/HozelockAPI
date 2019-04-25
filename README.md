@@ -23,6 +23,7 @@ Supports "GET"
 Return the full payload for your hub.
 ```JSON
 GET http://hoz3.com/restful/support/hubs/{hubId}
+
 {
     "errorCode": 0,
     "hub": {
@@ -66,7 +67,7 @@ GET http://hoz3.com/restful/support/hubs/{hubId}
             {
                 "name": "{controllerName}",
                 "image": null,
-                "controllerID": "0",
+                "controllerID": "{controllerId}",
                 "scheduleID": "{scheduleId}",
                 "schedule": {
                     "scheduleID": "{scheduleId",
@@ -145,13 +146,13 @@ GET http://hoz3.com/restful/support/hubs/{hubId}
 ```
 
 ## /{hubId}/schedules
-
 Supports "GET"
 
 Returns an array of all Schedules for the Hub. Note: This does NOT mean the schedule is applied to the controller. (Sample below with some days removed). This example is set to water at Sunrise and Sunset hence two entries per day.
 
 ```JSON
 GET https://hoz3.com/restful/support/hubs/{hubId}/schedules
+
 [
      {
          "scheduleID": "{scheduleId}",
@@ -199,13 +200,13 @@ GET https://hoz3.com/restful/support/hubs/{hubId}/schedules
 ```
 
 ## /{hubId}/schedules/{scheduleId}
-
 Supports "DELETE", "GET", "HEAD", "PATCH", "POST", "PUT", "OPTIONS"
 
 Used to manage a specific schedule from the schedule array by appending the scheduleID to the URL.
 
 ```JSON
 GET https://hoz3.com/restful/support/hubs/{hubId}/schedules/{scheduleId}
+
 {
     "schedule": {
         "scheduleID": "{scheduleId}",
@@ -261,12 +262,13 @@ Retrieve all controllers
 
 ```JSON
 GET https://hoz3.com/restful/support/hubs/{hubId}/controllers
+
 {
          "controllers": [
              {
                  "name": "{controllerName}",
                  "image": null,
-                 "controllerID": "0",
+                 "controllerID": "{controllerId}",
                  "scheduleID": "{scheduleId}",
                  "schedule": {
                      "scheduleID": "{scheduleId}",
@@ -329,7 +331,6 @@ GET https://hoz3.com/restful/support/hubs/{hubId}/controllers
 ```
 
 ## /{hubId}/controllers/{controllerId}
-
 Supports "GET", "HEAD" and "OPTIONS".
 
 ```JSON
@@ -421,7 +422,6 @@ GET http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/
  ```
 
 ## /{hubId}/controllers/actions/waterNow
-
 Will issue a waterNow command for {duration} in milliseconds
 
 ```JSON
@@ -466,7 +466,7 @@ POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/unpause
 
 Request Body
 {
-     "controllerIDs":[0]
+     "controllerIDs":[{controllerId}]
  }
 
 Response
@@ -531,7 +531,7 @@ Response
 }
 ```
 
-TODO - Document
+
 ## /{hubId}/controllers/actions/setMode
 Set's the Communication Mode {mode} for a given {controllerId}. Mode is a String value.
 
@@ -556,8 +556,6 @@ Response
 ```
 ## /{hubId}/controllers/actions/ping
 Despite ping being listed as available if you issue a POST or a GET the response says that ping is not implemented.
-
-TODO - Investigte more.
 
 # Credits
 Original inspiration to look into this comes from https://community.home-assistant.io/t/having-hozelock-cloud-controller-kit-intergration/55694/3
