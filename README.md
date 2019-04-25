@@ -533,9 +533,27 @@ Response
 
 TODO - Document
 ## /{hubId}/controllers/actions/setMode
-Not sure but is expecting “mode” parameter
+Set's the Communication Mode {mode} for a given {controllerId}. Mode is a String value.
 
-TODO - Document
+Valid Modes are "normal" or "demo"
+
+Normal: Controller will communicate with the Hub every 20 mins
+
+Demo: Controller will communciate with the Hub every minute (uses lot's of battery power)
+
+```JSON
+POST https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/setMode
+
+Request Body
+{
+     "controllerIDs":[{controllerId}],
+     "mode":{mode}
+ }
+Response
+{
+    "errorCode": 0
+}
+```
 ## /{hubId}/controllers/actions/ping
 Despite ping being listed as available if you issue a POST or a GET the response says that ping is not implemented.
 
