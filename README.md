@@ -422,13 +422,15 @@ GET http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/
 
 ## /{hubId}/controllers/actions/waterNow
 
+Will issue a waterNow command for {duration} in milliseconds
+
 ```JSON
 POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/waterNow
 
 Request Body
 {
      "controllerIDs":[{controllerId}],
-     "duration":{durationInMilliseconds}
+     "duration":{duration}
  }
 
 Response
@@ -439,7 +441,7 @@ Response
 
 
 ## /{hubId}/controllers/actions/Pause
-Will pause watering for {pauseDuration} number of days
+Will pause watering schedule for {pauseDuration} number of milliseconds
 
 ```JSON
 POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/pause
@@ -457,9 +459,23 @@ Response
 ```
 
 ## /{hubId}/controllers/actions/Unpause 
-Will remove a Pause
+Will remove a Pause for a specified controller
 
-TODO - Document
+```JSON
+POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/unpause
+
+Request Body
+{
+     "controllerIDs":[0]
+ }
+
+Response
+{
+    "errorCode": 0
+ }
+
+```
+
 ## /{hubId}/controllers/actions/Adjust
 I believe this endpoint is used to increase the percentage of watering time for a period of time.
 
