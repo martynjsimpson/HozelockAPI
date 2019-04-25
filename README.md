@@ -477,9 +477,26 @@ Response
 ```
 
 ## /{hubId}/controllers/actions/Adjust
-I believe this endpoint is used to increase the percentage of watering time for a period of time.
+Make a temporary percentage adjustment {percentage} to the controller/s {controlerId} for {duration} in milliseconds
 
-TODO - Document
+Note: Percentage can be signed (positive or negative) but should NOT include the % symbol.
+
+```JSON
+POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/adjust
+
+Request Body
+{
+     "controllerIDs":[{controlerId}],
+     "duration":{duration},
+     "wateringAdjustment":{percentage}
+ }
+
+Response
+{
+    "errorCode": 0
+}
+```
+
 ## /{hubId}/controllers/actions/UnAdjust
 Undo the adjust
 
