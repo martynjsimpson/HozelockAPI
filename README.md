@@ -498,9 +498,22 @@ Response
 ```
 
 ## /{hubId}/controllers/actions/UnAdjust
-Undo the adjust
+Used to remove the adjustment.
 
-TODO - Document
+```JSON
+POST https://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/unadjust
+
+Request Body
+{
+     "controllerIDs":[{controllerId}]
+ }
+
+Response
+{
+    "errorCode": 0
+}
+```
+
 ## /{hubId}/controllers/actions/stopWatering
 Stops the watering
 
