@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "45364b9e-b418-4242-a8d5-adae10299aeb",
+		"name": "Hoz3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All by Hub Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://hoz3.com/restful/support/hubs/{{hubId}}",
+					"protocol": "http",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Hub Schedules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}}/schedules",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}}",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Hub Schedules by scheduleId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/schedules/{{scheduleId}}",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"schedules",
+						"{{scheduleId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Controllers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/{{controllerId}}/",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"{{controllerId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Controller by controllerId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/{{controllerId}}/",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"{{controllerId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Actions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WaterNow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0],\n     \"duration\":300000\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/waterNow",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"waterNow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pause Watering",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0],\n     \"duration\":60000\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/pause",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"pause"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnPause",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0]\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/unpause",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"unpause"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adjust",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0],\n     \"duration\":10000,\n     \"wateringAdjustment\":25\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/adjust",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"adjust"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnAdjust",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0],\n     \"duration\":10000,\n     \"wateringAdjustment\":25\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/unadjust",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"unadjust"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Watering",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0]\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/stopWatering",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"stopWatering"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Mode",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0],\n     \"mode\":\"demo\"\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/setMode",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"setMode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"controllerIDs\":[0]\n }"
+				},
+				"url": {
+					"raw": "https://hoz3.com/restful/support/hubs/{{hubId}}/controllers/actions/ping",
+					"protocol": "https",
+					"host": [
+						"hoz3",
+						"com"
+					],
+					"path": [
+						"restful",
+						"support",
+						"hubs",
+						"{{hubId}}",
+						"controllers",
+						"actions",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e6057bff-e3b2-4de5-8dbb-d022d6987b96",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "916a36f6-d6b0-4c43-8994-d37e4e1a6279",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e68e10f2-e1ea-46cc-a3ef-82b5e75241f2",
+			"key": "hubId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
