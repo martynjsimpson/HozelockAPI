@@ -441,7 +441,7 @@ Response
 
 
 ## /{hubId}/controllers/actions/Pause
-Will pause watering schedule for {pauseDuration} number of milliseconds
+Will pause watering schedule for {pauseDuration} number of Days.
 
 ```JSON
 POST http://hoz3.com/restful/support/hubs/{hubId}/controllers/actions/pause
@@ -477,7 +477,7 @@ Response
 ```
 
 ## /{hubId}/controllers/actions/Adjust
-Make a temporary percentage adjustment {percentage} to the controller/s {controlerId} for {duration} in milliseconds
+Make a temporary percentage adjustment {percentage} to the controller/s {controlerId} for {duration} in days.
 
 Note: Percentage can be signed (positive or negative) but should NOT include the % symbol.
 
